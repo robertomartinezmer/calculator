@@ -1,0 +1,59 @@
+*{
+    color: white;
+}
+body{
+    margin: 0;
+    background-color: #224870;
+}
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;  /* el vh hace qye tome toda la altura de la pagina*/
+}
+.calculadora{
+    display: grid; /* para ubicar todo como grilla */
+    grid-template-columns: repeat(4,75px);  /* 4 columnas de 75px cada uno */
+    grid-template-rows: 160px repeat(5, 75px); /* primera fila de 160px; las demás 5 de 75 px*/
+    background-color: #803e26;
+    padding: 15px;
+    border-radius: 30px;
+    box-shadow: 15px 10px 0px 5px #0000333b; /* para agregar la sombra*/
+}
+button {
+    cursor: pointer;  /* con esto se pone la manito del cursor sobre el botón */
+    margin: 5px;
+    padding: 0;
+    border-radius: 30px;
+    font-size: 30px;
+    border: none;
+    background-color: #803e26;
+    box-shadow: 5px 5px 10px -3px #0000333b,-5px -5px 15px 3px #9a3c19a9; /*sombra de los botones negro y claro */
+}
+button:active{
+    background-color:#61301e ; /* cambiar el color del botón cuando se da click */
+}
+
+.display{
+    grid-column: 1/-1; /*toma toda la grilla */
+    padding: 15px;
+    display: flex;
+    margin: 10px 10px 20px;
+    flex-direction: column; /* para ubicar uno arriba del otro */
+    align-items: flex-end; /* enviarlo a la derecha */
+    background-color: #21364d;
+    border-radius: 30px;
+    justify-content: space-between;
+    box-shadow: 0px 0px 0px 10px #0000333b;
+}
+
+.col-2 {
+    grid-column: span 2;  /*se estiran los botones a las dos columnas */
+}
+/* para cambiar el tamaño de los valores en el display de la calculadora */
+#valor-actual {
+    font-size: 1.5em;
+}
+#valor-anterior{
+    font-size: 2.6em;
+}
